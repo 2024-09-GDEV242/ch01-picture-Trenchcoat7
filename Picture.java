@@ -6,15 +6,16 @@
  *
  * This class was written as an early example for teaching Java with BlueJ.
  * 
- * @author  Michael Kšlling and David J. Barnes
+ * @author  Katie Strong
  * @version 2016.02.29
  */
 public class Picture
 {
-    private Square wall;
-    private Square window;
-    private Triangle roof;
-    private Circle sun;
+    private Square crust;
+    private Circle pepOne;
+    private Circle pepTwo;
+    private Triangle cheese;
+    private Person mark;
     private boolean drawn;
 
     /**
@@ -22,10 +23,11 @@ public class Picture
      */
     public Picture()
     {
-        wall = new Square();
-        window = new Square();
-        roof = new Triangle();  
-        sun = new Circle();
+        crust = new Square();
+        pepOne = new Circle();
+        pepTwo = new Circle();
+        cheese = new Triangle();
+        mark = new Person();
         drawn = false;
     }
 
@@ -35,27 +37,33 @@ public class Picture
     public void draw()
     {
         if(!drawn) {
-            wall.moveHorizontal(-140);
-            wall.moveVertical(20);
-            wall.changeSize(120);
-            wall.makeVisible();
+            crust.moveHorizontal(-140);
+            crust.moveVertical(20);
+            crust.changeSize(120);
+            crust.makeVisible();
             
-            window.changeColor("black");
-            window.moveHorizontal(-120);
-            window.moveVertical(40);
-            window.changeSize(40);
-            window.makeVisible();
+            cheese.changeColor("yellow");
+            cheese.moveHorizontal(20);
+            cheese.moveVertical(-65);
+            cheese.changeSize(160,120);
+            cheese.makeVisible();
     
-            roof.changeSize(60, 180);
-            roof.moveHorizontal(20);
-            roof.moveVertical(-60);
-            roof.makeVisible();
-    
-            sun.changeColor("yellow");
-            sun.moveHorizontal(100);
-            sun.moveVertical(-40);
-            sun.changeSize(80);
-            sun.makeVisible();
+            pepOne.changeColor("red");
+            pepOne.moveHorizontal(-10);
+            pepOne.moveVertical(40);
+            pepOne.changeSize(30);
+            pepOne.makeVisible();
+            
+            pepTwo.changeColor("red");
+            pepTwo.moveHorizontal(-30);
+            pepTwo.moveVertical(100);
+            pepTwo.changeSize(30);
+            pepTwo.makeVisible();
+            
+            mark.moveHorizontal(140);
+            mark.moveVertical(20);
+            mark.changeSize(200,20);
+            mark.makeVisible();
             drawn = true;
         }
     }
@@ -65,10 +73,11 @@ public class Picture
      */
     public void setBlackAndWhite()
     {
-        wall.changeColor("black");
-        window.changeColor("white");
-        roof.changeColor("black");
-        sun.changeColor("black");
+        crust.changeColor("black");
+        cheese.changeColor("white");
+        pepOne.changeColor("black");
+        pepTwo.changeColor("black");
+        mark.changeColor("black");
     }
 
     /**
@@ -76,9 +85,10 @@ public class Picture
      */
     public void setColor()
     {
-        wall.changeColor("red");
-        window.changeColor("black");
-        roof.changeColor("green");
-        sun.changeColor("yellow");
+        crust.changeColor("red");
+        cheese.changeColor("yellow");
+        pepOne.changeColor("red");
+        pepTwo.changeColor("red");
+        mark.changeColor("black");
     }
 }
