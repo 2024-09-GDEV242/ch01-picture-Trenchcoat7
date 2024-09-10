@@ -16,6 +16,7 @@ public class Picture
     private Circle pepTwo;
     private Triangle cheese;
     private Person mark;
+    private Person markButPink;
     private boolean drawn;
 
     /**
@@ -28,6 +29,7 @@ public class Picture
         pepTwo = new Circle();
         cheese = new Triangle();
         mark = new Person();
+        markButPink = new Person();
         drawn = false;
     }
 
@@ -64,6 +66,12 @@ public class Picture
             mark.moveVertical(20);
             mark.changeSize(200,20);
             mark.makeVisible();
+            
+            markButPink.changeColor("magenta");
+            markButPink.moveHorizontal(160);
+            markButPink.moveVertical(20);
+            markButPink.changeSize(200,20);
+            markButPink.makeVisible();
             drawn = true;
         }
     }
@@ -78,6 +86,7 @@ public class Picture
         pepOne.changeColor("black");
         pepTwo.changeColor("black");
         mark.changeColor("black");
+        markButPink.changeColor("black");
     }
 
     /**
@@ -90,5 +99,6 @@ public class Picture
         pepOne.changeColor("red");
         pepTwo.changeColor("red");
         mark.changeColor("black");
+        markButPink.changeColor("magenta");
     }
 }
